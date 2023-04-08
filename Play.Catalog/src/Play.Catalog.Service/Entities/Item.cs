@@ -1,6 +1,7 @@
 namespace Play.Catalog.Entities
 {
-    public record Item
+
+    public record Item : IEntity
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
