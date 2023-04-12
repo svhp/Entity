@@ -1,13 +1,7 @@
-using Play.Catalog.Service;
-using MongoDB.Bson;
-using MongoDB.Bson.Serialization;
-using MongoDB.Bson.Serialization.Serializers;
 using Serilog;
-using Play.Catalog.Service.Settings;
-using Play.Catalog.Service.Repositories;
-using MongoDB.Driver;
 using Play.Catalog.Entities;
-
+using Play.Common.MongoDB;
+using Play.Common.MassTransit;
 
 //Creating logger
 Log.Logger = new LoggerConfiguration()
@@ -18,6 +12,7 @@ Log.Logger = new LoggerConfiguration()
 Log.Information("Application is starting");
 
 var builder = WebApplication.CreateBuilder(args);
+var allowedOrigins = builder.Configuration.GetValue<string>("AllowedOrigin");
 
 builder.Services.AddControllers(options =>
 {
@@ -27,7 +22,20 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Host.UseSerilog();
 builder.Services.AddMongo()
-                .AddMongoRepository<Item>("items");
+                .AddMongoRepository<Item>("items")
+                .AddMassTransitRabbitMQ();
+
+// Add CORS services
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(builder =>
+    {
+        builder.WithOrigins(allowedOrigins)
+               .AllowAnyMethod()
+               .AllowAnyHeader();
+    });
+});
+
 
 var app = builder.Build();
 
@@ -41,6 +49,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseCors();
 
 app.MapControllers();
 

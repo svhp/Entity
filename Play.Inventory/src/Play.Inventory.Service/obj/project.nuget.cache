@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9CmOTYmR4jgjKVpyMlDthrB+kZaECTNxF7wukhrmr+f4sTnWRxFBAiHU1htgCFGvt02HTdgomWgtXuv99JOd9w==",
+  "dgSpecHash": "vhZLezsU+6THdw9t0Zm70k7TsWp1YJFxdrtYYNhYH+0AQV3k0Nu63k9rjGlqUQeq5b3syBiHW4R1FVF3GhwLEw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tomas\\Desktop\\repos\\Play.Inventory\\src\\Play.Inventory.Service\\Play.Inventory.Service.csproj",
+  "projectFilePath": "c:\\Users\\tomas\\Desktop\\repos\\Play.Inventory\\src\\Play.Inventory.Service\\Play.Inventory.Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tomas\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\tomas\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",
@@ -37,7 +37,7 @@
     "C:\\Users\\tomas\\.nuget\\packages\\mongodb.driver.core\\2.19.1\\mongodb.driver.core.2.19.1.nupkg.sha512",
     "C:\\Users\\tomas\\.nuget\\packages\\mongodb.libmongocrypt\\1.7.0\\mongodb.libmongocrypt.1.7.0.nupkg.sha512",
     "C:\\Users\\tomas\\.nuget\\packages\\play.catalog.contracts\\1.0.0\\play.catalog.contracts.1.0.0.nupkg.sha512",
-    "C:\\Users\\tomas\\.nuget\\packages\\play.common\\1.0.1\\play.common.1.0.1.nupkg.sha512",
+    "C:\\Users\\tomas\\.nuget\\packages\\play.common\\1.0.3\\play.common.1.0.3.nupkg.sha512",
     "C:\\Users\\tomas\\.nuget\\packages\\polly\\7.2.3\\polly.7.2.3.nupkg.sha512",
     "C:\\Users\\tomas\\.nuget\\packages\\polly.extensions.http\\3.0.0\\polly.extensions.http.3.0.0.nupkg.sha512",
     "C:\\Users\\tomas\\.nuget\\packages\\rabbitmq.client\\6.4.0\\rabbitmq.client.6.4.0.nupkg.sha512",
